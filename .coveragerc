@@ -1,0 +1,11 @@
+[run]
+source = ./
+omit = */pdas/*, */tests/*, */settings/*, manage.py, *settings.py, *conftest.py, */migrations/*, wsgi.py, venv/*
+data_file = .coverage
+branch = true
+
+[report]
+show_missing = True
+
+[xml]
+output = test-results/coverage.xml
