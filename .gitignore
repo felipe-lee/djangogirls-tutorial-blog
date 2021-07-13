@@ -183,6 +183,7 @@ pnpm-debug.log*
 
 # Editor directories and files
 .vscode
+.history
 *.suo
 *.ntvs*
 *.njsproj
