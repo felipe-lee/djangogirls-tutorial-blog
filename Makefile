@@ -30,13 +30,13 @@ build-test:  ## Build dev image and run django tests
 	$(MAKE) test
 
 .PHONY: test
-test:  ## Run tests. Optionally pass OPTIONS="<your options>" e.g. make test OPTIONS="pets/tests/test_views.py"
-	docker-compose run app pytest $(OPTIONS)
+test:  ## Run tests. Optionally pass OPT="<your options>" e.g. make test OPT="pets/tests/test_views.py"
+	docker-compose run app pytest $(OPT)
 
 .PHONY: lint
 lint:  ## Run black to lint code
 	docker-compose run --rm app black .
 
 .PHONY: django
-django: ## Run a django command, e.g. make django COMMAND=migrate or make django COMMAND='createsuperuser --username=speede --email=speede@gmail.com'
-	docker-compose run --rm app python manage.py $(COMMAND)
+django: ## Run a django command, e.g. make django CMD=migrate or make django CMD='createsuperuser --username=speede --email=speede@gmail.com'
+	docker-compose run --rm app python manage.py $(CMD)
