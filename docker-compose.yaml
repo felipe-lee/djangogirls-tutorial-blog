@@ -14,6 +14,7 @@ services:
   app:
     build: .
     image: djangogirls-dev
+    command: python3 manage.py runserver_plus 0.0.0.0:8000
     tty: true
     stdin_open: true
     volumes:
