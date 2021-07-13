@@ -12,12 +12,12 @@ build-dev:  ## Build dev image
 	docker-compose build --pull app
 
 .PHONY: build-local
-build-local:  ## Build dev image and run local webserver at local.utexas.edu:8000
+build-local:  ## Build dev image and run local webserver at localhost:8000
 	$(MAKE) build-dev
 	$(MAKE) local
 
 .PHONY: local
-local:  ## Run local webserver at local.utexas.edu:8000
+local:  ## Run local webserver at localhost:8000
 	docker-compose up app
 
 .PHONY: run-container
