@@ -14,6 +14,7 @@ exclude = '''
     | buck-out
     | build
     | dist
+    | \venv
     | \.idea
     | \.pytest_cache
   )/
